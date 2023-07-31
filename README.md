@@ -1,3 +1,2 @@
-# BASE PARA PROYECTOS MVC
-Base para programación MVC con php
-Curso de ingenieria de software
+# PROYECTO1
+Primer proyecto MVC de Curso de Ingenieria de Software
