@@ -17,7 +17,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="/proyecto1/">
-                <img src="<?= asset('./images/cit.png') ?>" width="35px'" alt="cit" >
+                <img src="<?= asset('./images/tienda.png') ?>" width="35px'" alt="cit" >
                 Proyecto1
             </a>
             <div class="collapse navbar-collapse" id="navbarToggler">
@@ -34,7 +34,7 @@
                         <ul class="dropdown-menu  dropdown-menu-dark "id="dropwdownRevision" style="margin: 0;">
                             <!-- <h6 class="dropdown-header">Información</h6> -->
                             <li>
-                                <a class="dropdown-item nav-link text-white " href="/aplicaciones/nueva"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Subitem</a>
+                                <a class="dropdown-item nav-link text-white " href="/proyecto1/productos"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Productos</a>
                             </li>
                         
                     

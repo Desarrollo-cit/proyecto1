@@ -45,6 +45,60 @@ class ProductoController{
         }
     }
 
+    public static function modificarAPI(){
+        try {
+            $producto = new Producto($_POST);
+            $resultado = $producto->actualizar();
+
+            if($resultado['resultado'] == 1){
+                echo json_encode([
+                    'mensaje' => 'Registro modificado correctamente',
+                    'codigo' => 1
+                ]);
+            }else{
+                echo json_encode([
+                    'mensaje' => 'Ocurrió un error',
+                    'codigo' => 0
+                ]);
+            }
+            // echo json_encode($resultado);
+        } catch (Exception $e) {
+            echo json_encode([
+                'detalle' => $e->getMessage(),
+                'mensaje' => 'Ocurrió un error',
+                'codigo' => 0
+            ]);
+        }
+    }
+
+    public static function eliminarAPI(){
+        try {
+            $producto_id = $_POST['producto_id'];
+            $producto = Producto::find($producto_id);
+            $producto->producto_situacion = 0;
+            $resultado = $producto->actualizar();
+
+            if($resultado['resultado'] == 1){
+                echo json_encode([
+                    'mensaje' => 'Registro eliminado correctamente',
+                    'codigo' => 1
+                ]);
+            }else{
+                echo json_encode([
+                    'mensaje' => 'Ocurrió un error',
+                    'codigo' => 0
+                ]);
+            }
+            // echo json_encode($resultado);
+        } catch (Exception $e) {
+            echo json_encode([
+                'detalle' => $e->getMessage(),
+                'mensaje' => 'Ocurrió un error',
+                'codigo' => 0
+            ]);
+        }
+    }
+
     public static function buscarAPI(){
         // $productos = Producto::all();
         $producto_nombre = $_GET['producto_nombre'];
